@@ -3,5 +3,4 @@ def app (environ, start_response):
     response_headers = [('Content-type','text/plain')]
     start_response(status, response_headers)
     options = [bytes(i + '\n', 'ascii') for i in environ['QUERY_STRING'].split('&')]
-    print(options)
     return options
